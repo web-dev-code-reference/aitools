@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 class BarcodegeneratorController extends Controller
 {
     //
-    public function barcode()
+    public function barcode(Request $request)
     {
-        return view('barcode/barcodegenerator');
+
+        // dd($request->all());
+
+        $bcode_type = $request->bcode_type;
+        return view('barcode/barcodegenerator')->with('bcode_type', $bcode_type)->with('width', $request->width)->with('height', $request->height);
     }
 }
