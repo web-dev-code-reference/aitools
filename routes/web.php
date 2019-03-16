@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/barcode/generator','BarcodegeneratorController@barcode')->name('barcode.generator');
-Route::get('/barcode',function(){
-    return view('barcode.index');
-})->name('barcode.index');
+Route::get('/barcode/','BarcodegeneratorController@barcode')->name('barcode.generator');
+// Route::get('/barcode',function(){
+//     return view('barcode.index');
+// })->name('barcode.index');

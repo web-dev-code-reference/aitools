@@ -8,18 +8,20 @@
         <div class="col col-md-6">
             <div class="form-group">
                 <label for="height">Height</label>
-                <input type="number" value="124" class="form-control" id="height" name="height">
+                <!-- <input type="number" value="124" class="form-control" id="height" name="height"> -->
+                <input type="number" value="33" class="form-control" id="height" name="height">
             </div>
         </div>
         <div class="col col-md-6">
             <div class="form-group">
                 <label for="width">width</label>
-                <input type="number" value="5.2" class="form-control" id="width" name="width">
+                <!-- <input type="number" value="5.2" class="form-control" id="width" name="width"> -->
+                <input type="number" value="3" class="form-control" id="width" name="width">
             </div>
         </div>
     </div>
 
-
+    <input type="number" value="1234567890" class="form-control" id="width" name="barcode_val" hidden>
 
 
 
@@ -30,30 +32,30 @@
         <option>C39E</option>
         <option>C39E+</option>
         <option>C93</option>
-        <!-- <option>S25</option> -->
-        <!-- <option>S25+</option> -->
-        <!-- <option>I25</option> -->
-        <!-- <option>I25+</option> -->
+        <option>S25</option>
+        <option>S25+</option>
+        <option>I25</option>
+        <option>I25+</option>
         <option selected>C128</option>
-        <!-- <option>C128A</option> -->
+        <option>C128A</option>
         <option>C128B</option>
-        <!-- <option>C128C</option> -->
-        <!-- <option>EAN2</option> -->
-        <!-- <option>EAN5</option> -->
-        <!-- <option>EAN8</option> -->
-        <!-- <option>EAN13</option> -->
-        <!-- <option>UPCA</option> -->
-        <!-- <option>UPCE</option> -->
-        <!-- <option>MSI</option> -->
-        <!-- <option>MSI+</option> -->
-        <!-- <option>POSTNET</option> -->
-        <!-- <option>PLANET</option> -->
+        <option>C128C</option>
+        <option>EAN2</option>
+        <option>EAN5</option>
+        <option>EAN8</option>
+        <option>EAN13</option>
+        <option>UPCA</option>
+        <option>UPCE</option>
+        <option>MSI</option>
+        <option>MSI+</option>
+        <option>POSTNET</option>
+        <option>PLANET</option>
         <option>RMS4CC</option>
         <option>KIX</option>
         <option>IMB</option>
-        <!-- <option>CODABAR</option> -->
-        <!-- <option>CODE11</option> -->
-        <!-- <option>PHARMA</option> -->
+        <option>CODABAR</option>
+        <option>CODE11</option>
+        <option>PHARMA</option>
         <option>PHARMA2T</option>
       </select>
       <br>
