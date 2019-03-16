@@ -4,7 +4,7 @@
 @extends('layouts.barcode')
 
 @section('content')
-  <form action="{{route('barcode.generator')}}" method="get">
+  <form action="{{route('barcode.generator')}}" method="post">
   {{csrf_field()}}
 
 
