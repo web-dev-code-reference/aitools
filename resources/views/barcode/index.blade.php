@@ -16,12 +16,12 @@
             <div class="form-group">
                 <label for="width">width</label>
                 <!-- <input type="number" value="5.2" class="form-control" id="width" name="width"> -->
-                <input type="number" value="3" class="form-control" id="width" name="width">
+                <input type="number" value="3" class="form-control" id="width"name="width">
             </div>
         </div>
     </div>
 
-    <input type="number" value="1234567890" class="form-control" id="width" name="barcode_val" hidden>
+    <input type="number" value="1234567890" class="form-control" id="value" name="barcode_val" hidden>
 
 
 

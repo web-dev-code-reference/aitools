@@ -10,11 +10,9 @@ class BarcodegeneratorController extends Controller
     public function barcode(Request $request)
     {
 
-      
-
-        if(!isset($request->barcode_val)){ $request->barcode_val="1234567890";}
-        if(!isset($request->width)){  $request->width = 3;}
-        if(!isset($request->height)){  $request->height = $request->width * 20;}
+        if(!isset($request->barcode_val)){ $request->barcode_val="alexies1234567890";}
+        if(!isset($request->width)){  $request->width = 4;}
+        if(!isset($request->height)){  $request->height =124; }
         if(!isset($request->bcode_type)){  $request->bcode_type = 'C128';}
 
         Session::flash('bcode_width', $request->width);

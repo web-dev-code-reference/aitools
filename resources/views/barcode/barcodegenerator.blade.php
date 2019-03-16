@@ -63,13 +63,13 @@
 		<div class="col col-md-6">
 			<div class="form-group">
 			<label for="height">Height</label>
-			<input type="number" value="{{ Session::get('bcode_height')}}"  step="0.01" class="form-control" id="height" name="height" >
+			<input type="number" value="{{ Session::get('bcode_height')}}"  step="0.01" class="form-control" id="height" name="height"  max="124" >
 			</div>
 		</div>
 		<div class="col col-md-6">
 			<div class="form-group">
 			<label for="width">width</label>
-			<input type="number" value="{{ Session::get('bcode_width')}}"  placeholder=""  step="0.01" class="form-control" id="width" name="width" >
+			<input type="number" value="{{ Session::get('bcode_width')}}"  placeholder=""  step="0.01" class="form-control" id="width" name="width"   max="4.4"  >
 			</div>
 		</div>
   </div>
