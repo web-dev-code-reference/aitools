@@ -18,13 +18,15 @@
   <div class="container">
     <ul class="navbar-nav">
       <li class="nav-item active">
-      <a class="nav-link" href="#">Active</a>
+      <a class="nav-link" href="/">Home</a>
       </li>
-      <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Tools
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('barcode.generator')}}">Barcode Generator</a>
+        </div>
       </li>
       <li class="nav-item">
       <a class="nav-link disabled" href="#">Disabled</a>
@@ -36,8 +38,8 @@
 
 <div class="container pt-5">
   <div class="jumbotron">
-		<h1>Barcode Generator</h1> 
-		<p>An amazing tool for everybody</p> 
+		<h1>@yield('page-title')</h1> 
+		<p>@yield('page-description')</p> 
   </div>
   @yield('content')
 </div>
