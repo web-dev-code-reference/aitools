@@ -1,5 +1,13 @@
 <!-- barcodegenerator.blade.php --> 
 
+@if(count($errors) > 0)
+
+	<div class="alert alert-danger">
+gf
+	</div>
+
+@endif
+
 
 @extends('layouts.main')
 
