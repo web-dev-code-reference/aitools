@@ -1,4 +1,5 @@
 <?php
+use App\Codetype;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,8 @@ Route::get('barcode','BarcodegeneratorController@barcode')->name('barcode.genera
 // Route::get('/barcode',function(){
 //     return view('barcode.index');
 // })->name('barcode.index');
+
+
+Route::get('/codetypes/{id}',function ($id) {
+    return App\Codetype::find($id)->codes;
+});

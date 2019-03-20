@@ -34,7 +34,14 @@ gf
     <div class="col col-md-6">
     <div class="form-group">
       <label for="sel1">Select Barcode Type:</label>
-      <select class="form-control" id="sel1" name="bcode_type" required>
+      <select  class="form-control" id="sel1" name="bcode_type" required >
+        <option id="{{ Session::get('bcode_type_id')}}" value="{{ Session::get('bcode_type_id')}}" >{{ Session::get('bcode_type_name')}}</option>
+        <!-- <option >C128</option> -->
+        @foreach($codes as $code)
+          <option value="{{$code->id}}" id="{{$code->id}}" >{{$code->name}}</option>
+        @endforeach
+      </select>
+      <!-- <select class="form-control" id="sel1" name="bcode_type" required>
         <option >{{ Session::get('bcode_type')}}</option>
         <option >C128</option>
         <option>C39</option>
@@ -67,7 +74,7 @@ gf
         <option>CODE11</option>
         <option>PHARMA</option>
         <option>PHARMA2T</option>
-      </select>
+      </select> -->
     </div>
     </div>
   </div>
@@ -108,7 +115,7 @@ gf
           <hr><br>
           <div class="row">
           <div class="col col-md-3" style="background-color: antiquewhite;">
-          <b>Barcode Type:</b> {{ Session::get('bcode_type')}} <br>
+          <b>Barcode Type:</b> {{ Session::get('bcode_type_name')}} <br>
           <b>Barcode Value:</b> {{ Session::get('bcode_val')}} <br>
           <b>Barcode Width:</b> {{ Session::get('bcode_width')}} <br>
           <b>Barcode Width:</b> {{ Session::get('bcode_height')}} <br>
