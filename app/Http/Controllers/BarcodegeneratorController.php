@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\Code;
+use App\Codetype;
 
 class BarcodegeneratorController extends Controller
 {
@@ -23,10 +24,15 @@ class BarcodegeneratorController extends Controller
         $bcode_type = Code::find($request->bcode_type);
         $bcode_type_name = Code::find($request->bcode_type)->name;
         $bcode_type_id = Code::find($request->bcode_type)->id;
-        // dd($bcode_type_name);
-        // Assign Variable for with
+        
+        // Attach list of Barcode options
         $codes = Code::orderBy('name', 'asc')->get();
         
+        // return Codetype::find(1)->desc;
+
+
+
+
         //session collection
         Session::flash('bcode_width', $request->width);
         Session::flash('bcode_height', $request->height);

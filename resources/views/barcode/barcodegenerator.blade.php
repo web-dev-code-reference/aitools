@@ -20,6 +20,8 @@ gf
 @stop()
 
 @section('content')
+
+
   <form method="get" action="{{route('barcode.generator')}}" >
   {{csrf_field()}}
 
@@ -41,40 +43,7 @@ gf
           <option value="{{$code->id}}" id="{{$code->id}}" >{{$code->name}}</option>
         @endforeach
       </select>
-      <!-- <select class="form-control" id="sel1" name="bcode_type" required>
-        <option >{{ Session::get('bcode_type')}}</option>
-        <option >C128</option>
-        <option>C39</option>
-        <option>C39+</option>
-        <option>C39E</option>
-        <option>C39E+</option>
-        <option>C93</option>
-        <option>S25</option>
-        <option>S25+</option>
-        <option>I25</option>
-        <option>I25+</option>
-        <option >C128</option>
-        <option>C128A</option>
-        <option>C128B</option>
-        <option>C128C</option>
-        <option>EAN2</option>
-        <option>EAN5</option>
-        <option>EAN8</option>
-        <option>EAN13</option>
-        <option>UPCA</option>
-        <option>UPCE</option>
-        <option>MSI</option>
-        <option>MSI+</option>
-        <option>POSTNET</option>
-        <option>PLANET</option>
-        <option>RMS4CC</option>
-        <option>KIX</option>
-        <option>IMB</option>
-        <option>CODABAR</option>
-        <option>CODE11</option>
-        <option>PHARMA</option>
-        <option>PHARMA2T</option>
-      </select> -->
+
     </div>
     </div>
   </div>
@@ -111,6 +80,7 @@ gf
     <div class="col col-md-12">
       <div class="card">
         <div class="card-body">
+          <p>{{ App\Code::find(1)->codetype->desc }}</p>
           <h4>Click the Barcode to Download</h4>
           <hr><br>
           <div class="row">
@@ -132,7 +102,6 @@ gf
             <a id="123" href="data:image/png;base64,' . DNS1D::getBarcodePNG("$barcode_val", "$bcode_type", number_format($width, 2),number_format($height, 2) ) . '" download="'.$barcode_val.'">
             <img  src="data:image/png;base64,' . DNS1D::getBarcodePNG("$barcode_val", "$bcode_type", number_format($width, 2),number_format($height, 2) ) . '" alt="barcode" />
             </a>';
-            
 
           @endphp 
           </center>
